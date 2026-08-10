@@ -66,7 +66,7 @@ export default function RotatingWord({ words }: { words: string[] }) {
             <span
               key={word}
               ref={(el) => (ghosts.current[i] = el)}
-              className="absolute left-0 top-0 whitespace-nowrap px-3 italic"
+              className="absolute left-0 top-0 whitespace-nowrap px-3"
             >
               {word}
             </span>
@@ -75,7 +75,7 @@ export default function RotatingWord({ words }: { words: string[] }) {
 
         <span
           key={index}
-          className={`inline-block whitespace-nowrap rounded-2xl bg-brand px-3 italic text-white ${
+          className={`inline-block whitespace-nowrap rounded-2xl bg-brand px-3 text-white ${
             leaving ? "animate-rotOut" : "animate-rotIn"
           }`}
         >

@@ -17,6 +17,7 @@ Type and spacing are lifted from the reference site so the pages feel related:
 | Token | Value | Notes |
 | --- | --- | --- |
 | Display face | Fraunces | Headlines, stat figures |
+| Display weight | **500**, `-0.01em`, `font-optical-sizing: auto` | Set on `.font-display`, which overrides any `font-bold` on the same element — matching the reference. Do not pin the `opsz` axis by hand; it changes the face's character. |
 | Body face | Palanquin | Everything else |
 | H1 | 34 → 44 → 64px | `text-[34px] sm:text-[44px] md:text-[64px]` |
 | H2 | 30 → 38px | |

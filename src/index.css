@@ -18,11 +18,9 @@
     font-feature-settings: "kern";
   }
 
-  /* Fraunces is a variable face; keep the display cut slightly narrow and
-     optically sized so headlines hold together at 64px. */
-  .font-display {
-    font-variation-settings: "SOFT" 0, "WONK" 0, "opsz" 90;
-  }
+  /* Fraunces' opsz axis is left on the browser's automatic optical sizing, which
+     is what the reference site does. Pinning opsz manually pushes the contrast
+     far past the reference and changes the face's character. */
 
   :focus-visible {
     outline: 2px solid var(--brand);
@@ -31,6 +29,18 @@
 }
 
 @layer utilities {
+  /* Mirrors the reference site's .font-display rule exactly. The display face is
+     set at 500 with -0.01em tracking and automatic optical sizing — this rule
+     deliberately wins over a font-bold on the same element, which is also how
+     the reference behaves. Setting it to 700 makes the headlines noticeably
+     heavier than the site this is styled after. */
+  .font-display {
+    font-family: Fraunces, Palanquin, Georgia, serif;
+    font-weight: 500;
+    font-optical-sizing: auto;
+    letter-spacing: -0.01em;
+  }
+
   /* Tabular figures so the stat chips don't jitter between values. */
   .nums {
     font-variant-numeric: tabular-nums;

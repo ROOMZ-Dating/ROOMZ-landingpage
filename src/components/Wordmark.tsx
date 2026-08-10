@@ -7,7 +7,10 @@ export default function Wordmark({
 }) {
   return (
     <span
-      className={`font-display text-[26px] font-extrabold tracking-[-0.02em] ${
+      /* The reference site's wordmark is an image, so it isn't governed by the
+         500-weight display rule. Set inline so it wins over that rule. */
+      style={{ fontWeight: 700 }}
+      className={`font-display text-[26px] tracking-[-0.02em] ${
         onDark ? "text-white" : "text-ink-black"
       } ${className}`}
     >
