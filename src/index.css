@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --brand: #6b21a8;
+    --brand-soft: #ede9fe;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-white font-body text-ink antialiased;
+    font-feature-settings: "kern";
+  }
+
+  /* Fraunces is a variable face; keep the display cut slightly narrow and
+     optically sized so headlines hold together at 64px. */
+  .font-display {
+    font-variation-settings: "SOFT" 0, "WONK" 0, "opsz" 90;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--brand);
+    outline-offset: 2px;
+  }
+}
+
+@layer utilities {
+  /* Tabular figures so the stat chips don't jitter between values. */
+  .nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
