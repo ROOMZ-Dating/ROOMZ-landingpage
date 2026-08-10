@@ -79,7 +79,7 @@ padding.
 
 The artwork is black lettering with the second O in `#6B21A8`, so it only works
 on light backgrounds. A dark surface needs a light variant of the file, not a
-CSS colour change. `Wordmark.tsx` takes a `height` prop (nav 27px, footer 25px)
+CSS colour change. `Wordmark.tsx` takes a `height` prop (nav 24px, footer 23px)
 and derives the width from the aspect ratio.
 
 ## Notes for launch
