@@ -11,7 +11,7 @@ export default function Nav() {
       <div className="flex w-full items-center justify-between px-4 py-3 lg:px-6">
         <div className="flex items-center gap-8">
           <a href="#top" aria-label="Roomz home" className="flex items-center">
-            <Wordmark />
+            <Wordmark height={30} />
           </a>
           <nav className="hidden items-center gap-7 md:flex" aria-label="Main">
             {nav.links.map((link) => (

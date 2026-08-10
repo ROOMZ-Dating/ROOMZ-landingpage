@@ -1,20 +1,29 @@
+/**
+ * The ROOMZ wordmark. The source file ships with a large empty viewBox, so
+ * `public/roomz-logo.svg` is the same artwork cropped to its content bounds
+ * (1447.55 x 285.27, about 5.07:1) — otherwise the mark renders small and
+ * off-centre inside its own padding.
+ *
+ * The artwork is black lettering with the second O in #6B21A8, so it is only
+ * placed on light backgrounds. A dark-background surface needs a light variant
+ * of the asset rather than a colour prop.
+ */
 export default function Wordmark({
   className = "",
-  onDark = false,
+  height = 26,
 }: {
   className?: string;
-  onDark?: boolean;
+  /** Rendered height in px; width follows the 5.07:1 aspect ratio. */
+  height?: number;
 }) {
   return (
-    <span
-      /* The reference site's wordmark is an image, so it isn't governed by the
-         500-weight display rule. Set inline so it wins over that rule. */
-      style={{ fontWeight: 700 }}
-      className={`font-display text-[26px] tracking-[-0.02em] ${
-        onDark ? "text-white" : "text-ink-black"
-      } ${className}`}
-    >
-      Room<span className={onDark ? "text-brand-soft" : "text-brand"}>z</span>
-    </span>
+    <img
+      src="/roomz-logo.svg"
+      alt="Roomz"
+      height={height}
+      width={Math.round(height * 5.0743)}
+      style={{ height, width: "auto" }}
+      className={`block ${className}`}
+    />
   );
 }

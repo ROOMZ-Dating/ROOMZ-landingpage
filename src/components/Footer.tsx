@@ -6,8 +6,8 @@ export default function Footer() {
     <footer className="border-t border-line">
       <div className="flex flex-col gap-8 px-6 py-12 lg:flex-row lg:items-center lg:justify-between lg:px-8">
         <div>
-          <Wordmark />
-          <p className="mt-2 text-[14px] text-ink-muted">{footer.tagline}</p>
+          <Wordmark height={28} />
+          <p className="mt-3 text-[14px] text-ink-muted">{footer.tagline}</p>
         </div>
 
         <nav aria-label="Footer">

@@ -68,6 +68,20 @@ lives in `src/lib/content.ts`, so text edits never touch layout.
 | Final CTA band | `FinalCta.tsx` |
 | Footer | `Footer.tsx` |
 
+## Logo
+
+`roomz-logo.svg` at the repo root is the original asset as supplied. Its viewBox
+is much larger than the artwork, so `public/roomz-logo.svg` is the same file with
+the viewBox cropped to the content bounds (`154.74 381.37 1447.55 285.27`, about
+5.07:1) — that cropped copy is the one the site loads. If the logo is ever
+re-exported, re-crop it the same way or it will render small inside its own
+padding.
+
+The artwork is black lettering with the second O in `#6B21A8`, so it only works
+on light backgrounds. A dark surface needs a light variant of the file, not a
+CSS colour change. `Wordmark.tsx` takes a `height` prop (nav 30px, footer 28px)
+and derives the width from the aspect ratio.
+
 ## Notes for launch
 
 - **App Store / Google Play buttons are placeholders.** They are inert `<span>`s
