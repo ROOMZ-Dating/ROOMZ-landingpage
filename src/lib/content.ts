@@ -250,7 +250,6 @@ export const footer = {
   tagline: "Roomz — Your event, their love story.",
   links: [
     { label: "Product", href: "#how" },
-    { label: "Pricing", href: "#" },
     { label: "For Organizers", href: "#how" },
     { label: "For Guests", href: "#guests" },
     { label: "Privacy Policy", href: "#" },
