@@ -1,5 +1,4 @@
 import { hero } from "@/lib/content";
-import Button, { ArrowRight } from "./ui/Button";
 import StoreBadges from "./ui/StoreBadges";
 import RotatingWord from "./RotatingWord";
 import RoomPreview from "./RoomPreview";
@@ -18,14 +17,7 @@ export default function Hero() {
         {hero.subhead}
       </p>
 
-      <div className="mt-8 flex w-full justify-center px-4">
-        <Button href={hero.primaryCta.href} size="lg">
-          {hero.primaryCta.label}
-          <ArrowRight className="ml-1.5" />
-        </Button>
-      </div>
-
-      <StoreBadges className="mt-5 justify-center" />
+      <StoreBadges className="mt-8 justify-center" />
 
       <div className="mt-14 w-full max-w-5xl">
         <RoomPreview />

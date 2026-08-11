@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { nav } from "@/lib/content";
-import Button from "./ui/Button";
 import Wordmark from "./Wordmark";
 
 export default function Nav() {
@@ -33,7 +32,6 @@ export default function Nav() {
           >
             {nav.secondary.label}
           </a>
-          <Button href={nav.cta.href}>{nav.cta.label}</Button>
 
           <button
             type="button"

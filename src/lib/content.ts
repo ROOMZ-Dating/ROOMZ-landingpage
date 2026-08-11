@@ -11,7 +11,6 @@ export const nav = {
     { label: "Trust", href: "#trust" },
     { label: "FAQ", href: "#faq" },
   ],
-  cta: { label: "Create a room", href: "#cta" },
   secondary: { label: "Sign in", href: "#" },
 };
 
@@ -26,7 +25,6 @@ export const hero = {
   ],
   subhead:
     "Roomz turns any event into a place where single guests meet — and gives organizers the tool to make it happen.",
-  primaryCta: { label: "Create a room", href: "#cta" },
 };
 
 export const split = {
@@ -34,7 +32,6 @@ export const split = {
     eyebrow: "For organizers",
     title: "Turn your event into an experience people talk about.",
     body: "Add a private Singles Room to your wedding, party, or venue night. Guests meet each other — you get the analytics and the credit.",
-    cta: { label: "Create a room", href: "#cta" },
   },
   guests: {
     eyebrow: "For guests",

@@ -1,5 +1,4 @@
 import { finalCta } from "@/lib/content";
-import Button, { ArrowRight } from "./ui/Button";
 import StoreBadges from "./ui/StoreBadges";
 
 export default function FinalCta() {
@@ -15,14 +14,7 @@ export default function FinalCta() {
         {finalCta.sub}
       </p>
 
-      <div className="mt-8 flex justify-center">
-        <Button href="#top" variant="onDark" size="lg">
-          Create a room
-          <ArrowRight className="ml-1.5" />
-        </Button>
-      </div>
-
-      <StoreBadges tone="dark" className="mt-6 justify-center" />
+      <StoreBadges tone="dark" className="mt-8 justify-center" />
     </section>
   );
 }

@@ -1,5 +1,4 @@
 import { split } from "@/lib/content";
-import Button, { ArrowRight } from "./ui/Button";
 import StoreBadges from "./ui/StoreBadges";
 import Eyebrow from "./ui/Eyebrow";
 
@@ -22,12 +21,6 @@ export default function AudienceSplit() {
           <p className="mt-3 text-[16px] leading-[26px] text-ink-muted">
             {split.organizers.body}
           </p>
-          <div className="mt-auto pt-7">
-            <Button href={split.organizers.cta.href} size="lg">
-              {split.organizers.cta.label}
-              <ArrowRight className="ml-1.5" />
-            </Button>
-          </div>
         </div>
 
         {/* Guests */}
