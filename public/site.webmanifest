@@ -1,0 +1,29 @@
+{
+  "name": "Roomz — Your event, their love story.",
+  "short_name": "Roomz",
+  "description": "Roomz turns any event into a place where single guests meet — and gives organizers the tool to make it happen.",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/maskable-icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "theme_color": "#6B21A8",
+  "background_color": "#FFFFFF",
+  "display": "standalone",
+  "start_url": "/"
+}
