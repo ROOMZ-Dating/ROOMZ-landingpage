@@ -59,13 +59,24 @@ export default function Footer() {
   return (
     <footer className="border-t border-line">
       <div className="flex flex-col gap-8 px-6 py-12 lg:flex-row lg:items-center lg:justify-between lg:px-8">
-        <div>
+        {/* All three blocks share the row equally so the icons land on the
+            page's centre line, rather than at the midpoint of the gap between
+            two unequal neighbours. */}
+        <div className="lg:flex-1">
           <Wordmark height={23} />
           <p className="mt-3 text-[14px] text-ink-muted">{footer.tagline}</p>
         </div>
 
-        <nav aria-label="Footer">
-          <ul className="flex flex-wrap gap-x-6 gap-y-3">
+        <ul className="flex items-center gap-3 lg:flex-1 lg:justify-center">
+          {footer.social.map((account) => (
+            <li key={account.label}>
+              <Social label={account.label} href={account.href} />
+            </li>
+          ))}
+        </ul>
+
+        <nav aria-label="Footer" className="lg:flex-1">
+          <ul className="flex flex-wrap gap-x-6 gap-y-3 lg:justify-end">
             {footer.links.map((link) => (
               <li key={link.label}>
                 <a
@@ -80,16 +91,8 @@ export default function Footer() {
         </nav>
       </div>
 
-      <div className="flex flex-col-reverse items-center gap-6 border-t border-line px-6 py-6 sm:flex-row sm:justify-between lg:px-8">
+      <div className="border-t border-line px-6 py-6 lg:px-8">
         <p className="text-[13px] text-ink-light">{footer.copyright}</p>
-
-        <ul className="flex items-center gap-3">
-          {footer.social.map((account) => (
-            <li key={account.label}>
-              <Social label={account.label} href={account.href} />
-            </li>
-          ))}
-        </ul>
       </div>
     </footer>
   );
