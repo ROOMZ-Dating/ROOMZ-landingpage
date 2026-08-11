@@ -256,5 +256,15 @@ export const footer = {
     { label: "Privacy Policy", href: "#" },
     { label: "Terms of Service", href: "#" },
   ],
+  /**
+   * Paste each profile URL in as it goes live and the icon starts linking out
+   * on its own. An empty href renders the icon inert rather than as a dead
+   * link — see the note in Footer.tsx.
+   */
+  social: [
+    { label: "Instagram", href: "" },
+    { label: "TikTok", href: "" },
+    { label: "YouTube", href: "" },
+  ],
   copyright: "© 2026 Roomz. All rights reserved.",
 };

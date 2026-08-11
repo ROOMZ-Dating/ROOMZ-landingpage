@@ -1,5 +1,59 @@
 import { footer } from "@/lib/content";
 import Wordmark from "./Wordmark";
+import {
+  InstagramIcon,
+  TikTokIcon,
+  YouTubeIcon,
+} from "./ui/SocialIcons";
+
+const ICONS: Record<string, (props: { className?: string }) => JSX.Element> = {
+  Instagram: InstagramIcon,
+  TikTok: TikTokIcon,
+  YouTube: YouTubeIcon,
+};
+
+const SHELL =
+  "inline-flex h-10 w-10 items-center justify-center rounded-pill border transition-colors";
+
+/**
+ * Renders as a real link once a profile URL exists, and as an inert control
+ * until then.
+ *
+ * The tempting shortcut — an <a> with no href — is what the reference site
+ * does, and it's broken twice over: a hrefless anchor isn't keyboard-focusable
+ * and isn't exposed as a link, so its aria-label never reaches assistive tech.
+ * This mirrors the placeholder treatment the store badges already use.
+ */
+function Social({ label, href }: { label: string; href: string }) {
+  const Icon = ICONS[label];
+  if (!Icon) return null;
+
+  if (!href) {
+    return (
+      <span
+        role="link"
+        aria-disabled="true"
+        aria-label={`${label} — coming soon`}
+        title="Coming soon"
+        className={`${SHELL} cursor-default border-line text-ink-light`}
+      >
+        <Icon />
+      </span>
+    );
+  }
+
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={`Roomz on ${label}`}
+      className={`${SHELL} border-line text-ink-muted hover:border-brand-softEdge hover:bg-brand-soft hover:text-brand`}
+    >
+      <Icon />
+    </a>
+  );
+}
 
 export default function Footer() {
   return (
@@ -26,8 +80,16 @@ export default function Footer() {
         </nav>
       </div>
 
-      <div className="border-t border-line px-6 py-6 lg:px-8">
+      <div className="flex flex-col-reverse items-center gap-6 border-t border-line px-6 py-6 sm:flex-row sm:justify-between lg:px-8">
         <p className="text-[13px] text-ink-light">{footer.copyright}</p>
+
+        <ul className="flex items-center gap-3">
+          {footer.social.map((account) => (
+            <li key={account.label}>
+              <Social label={account.label} href={account.href} />
+            </li>
+          ))}
+        </ul>
       </div>
     </footer>
   );
