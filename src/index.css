@@ -47,6 +47,26 @@
   }
 }
 
+/* Enable's accessibility trigger ships in blue and its dashboard only offers
+   blue, red, or white, so brand purple has to come from here.
+
+   Specificity is deliberately just one element above Enable's own base rule
+   (`#enable-toolbar-trigger svg .enable-trigger-circle`) — enough to win, but
+   still below two rules that must keep working: the trigger turning black while
+   the toolbar is open, and the high-contrast/black-yellow filters that force
+   their own colours with !important. Raising this further, or reaching for
+   !important, would override the widget's own accessibility modes.
+
+   The figure inside the disc is a separate `.a` path already filled white, so
+   it keeps its contrast against the purple without help. */
+body #enable-toolbar-trigger svg .enable-trigger-circle {
+  fill: var(--brand);
+}
+
+body #enable-toolbar-trigger svg .enable-trigger-check {
+  fill: #581c87; /* brand.dark — mirrors Enable's darker-shade check badge */
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
