@@ -133,7 +133,7 @@ export const proofAudience = {
       source: "Forbes Health survey, July 2025",
     },
     {
-      figure: "+42%",
+      figure: "+60%",
       label: "attendance at dating and singles events",
       body: "Growth in a single year, as people shift from apps to real-world ways to meet.",
       source: "Eventbrite, 2024",
