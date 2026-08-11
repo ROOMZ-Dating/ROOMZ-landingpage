@@ -10,7 +10,7 @@ export default function Eyebrow({
 }) {
   return (
     <span
-      className={`inline-flex items-center gap-2 rounded-pill border border-brand-softEdge bg-brand-soft px-3.5 py-1.5 text-[12px] font-semibold uppercase tracking-[0.18em] text-brand ${className}`}
+      className={`inline-flex items-center gap-2 rounded-pill border border-brand-softEdge bg-brand-soft px-3.5 py-1.5 text-[12px] font-bold uppercase tracking-[0.18em] text-brand ${className}`}
     >
       {children}
     </span>

@@ -26,7 +26,7 @@ export default function WhyOrganizers() {
       </div>
 
       <div className="mt-10 rounded-3xl bg-brand-soft px-6 py-8 text-center sm:px-10">
-        <p className="text-[12px] font-semibold uppercase tracking-[0.18em] text-brand">
+        <p className="text-[12px] font-bold uppercase tracking-[0.18em] text-brand">
           {whyOrganizers.audienceLabel}
         </p>
         <ul className="mt-4 flex flex-wrap items-center justify-center gap-2.5">
