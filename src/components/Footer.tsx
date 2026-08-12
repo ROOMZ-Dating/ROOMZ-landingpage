@@ -1,5 +1,30 @@
 import { footer } from "@/lib/content";
 import Wordmark from "./Wordmark";
+
+/**
+ * Loaded by the vendor snippet in index.html, so it's absent until that script
+ * runs — and stays absent if a content blocker eats it.
+ */
+declare global {
+  interface Window {
+    silktideConsentManager?: {
+      getInstance: () =>
+        | {
+            showBackdrop: () => void;
+            toggleModal: (open: boolean) => void;
+          }
+        | undefined;
+    };
+  }
+}
+
+/** Mirrors what Silktide's own "Preferences" button does. */
+function openCookiePreferences() {
+  const manager = window.silktideConsentManager?.getInstance();
+  if (!manager) return;
+  manager.showBackdrop();
+  manager.toggleModal(true);
+}
 import {
   InstagramIcon,
   TikTokIcon,
@@ -91,8 +116,16 @@ export default function Footer() {
         </nav>
       </div>
 
-      <div className="border-t border-line px-6 py-6 lg:px-8">
+      <div className="flex flex-col-reverse items-center gap-3 border-t border-line px-6 py-6 sm:flex-row sm:justify-between lg:px-8">
         <p className="text-[13px] text-ink-light">{footer.copyright}</p>
+
+        <button
+          type="button"
+          onClick={openCookiePreferences}
+          className="text-[13px] text-ink-light underline-offset-4 transition-colors hover:text-ink-muted hover:underline"
+        >
+          Cookie preferences
+        </button>
       </div>
     </footer>
   );
