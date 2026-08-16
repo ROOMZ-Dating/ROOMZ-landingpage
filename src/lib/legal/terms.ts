@@ -394,7 +394,7 @@ export const termsOfService: LegalDocument = {
       blocks: [
         {
           type: "p",
-          text: "If your account is suspended or terminated, you may contact us at support@roomz.app to appeal the decision. Roomz's decision on appeals is final.",
+          text: "If your account is suspended or terminated, you may contact us at admin@roomzdating.com to appeal the decision. Roomz's decision on appeals is final.",
         },
       ],
     },
@@ -479,7 +479,7 @@ export const termsOfService: LegalDocument = {
         { type: "p", text: "For questions about these Terms, please contact us at:" },
         {
           type: "list",
-          items: ["Email: legal@roomz.app", "Support: support@roomz.app"],
+          items: ["Email: admin@roomzdating.com", "Support: admin@roomzdating.com"],
         },
       ],
     },

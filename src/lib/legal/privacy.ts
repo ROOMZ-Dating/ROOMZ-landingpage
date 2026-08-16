@@ -376,7 +376,7 @@ export const privacyPolicy: LegalDocument = {
         },
         {
           type: "p",
-          text: "To exercise any of these rights, contact us at privacy@roomz.app. We will respond within 30 days. We may need to verify your identity before processing your request.",
+          text: "To exercise any of these rights, contact us at admin@roomzdating.com. We will respond within 30 days. We may need to verify your identity before processing your request.",
         },
       ],
     },
@@ -388,7 +388,7 @@ export const privacyPolicy: LegalDocument = {
       blocks: [
         {
           type: "p",
-          text: "Roomz is intended for users who are 18 years of age or older. We do not knowingly collect personal information from anyone under 18. If we become aware that a user is under 18, we will immediately suspend their account and delete their data. If you believe a minor is using the App, please contact us at privacy@roomz.app.",
+          text: "Roomz is intended for users who are 18 years of age or older. We do not knowingly collect personal information from anyone under 18. If we become aware that a user is under 18, we will immediately suspend their account and delete their data. If you believe a minor is using the App, please contact us at admin@roomzdating.com.",
         },
       ],
     },
@@ -457,9 +457,9 @@ export const privacyPolicy: LegalDocument = {
         {
           type: "list",
           items: [
-            "Privacy inquiries: privacy@roomz.app",
-            "General support: support@roomz.app",
-            "Legal: legal@roomz.app",
+            "Privacy inquiries: admin@roomzdating.com",
+            "General support: admin@roomzdating.com",
+            "Legal: admin@roomzdating.com",
           ],
         },
       ],
