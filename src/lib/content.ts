@@ -20,7 +20,7 @@ export const hero = {
     "love story",
     "perfect match",
     "first date",
-    "favorite memory",
+    "core memory",
     "new spark",
   ],
   subhead:
