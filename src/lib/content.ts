@@ -4,12 +4,15 @@
  */
 
 export const nav = {
+  // Root-relative so these still resolve correctly from other pages (the
+  // legal pages) — "/#how" navigates home and jumps to the section, whereas
+  // a bare "#how" would just add a dead hash to whatever page you're on.
   links: [
-    { label: "How it works", href: "#how" },
-    { label: "Why Roomz", href: "#why" },
-    { label: "For guests", href: "#guests" },
-    { label: "Trust", href: "#trust" },
-    { label: "FAQ", href: "#faq" },
+    { label: "How it works", href: "/#how" },
+    { label: "Why Roomz", href: "/#why" },
+    { label: "For guests", href: "/#guests" },
+    { label: "Trust", href: "/#trust" },
+    { label: "FAQ", href: "/#faq" },
   ],
   secondary: { label: "Sign in", href: "#" },
 };
@@ -249,11 +252,11 @@ export const finalCta = {
 export const footer = {
   tagline: "Roomz — Your event, their love story.",
   links: [
-    { label: "Product", href: "#how" },
-    { label: "For Organizers", href: "#how" },
-    { label: "For Guests", href: "#guests" },
-    { label: "Privacy Policy", href: "#" },
-    { label: "Terms of Service", href: "#" },
+    { label: "Product", href: "/#how" },
+    { label: "For Organizers", href: "/#how" },
+    { label: "For Guests", href: "/#guests" },
+    { label: "Privacy Policy", href: "/privacy-policy" },
+    { label: "Terms of Service", href: "/terms-of-service" },
   ],
   /**
    * Paste each profile URL in as it goes live and the icon starts linking out

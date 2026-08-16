@@ -9,7 +9,7 @@ export default function Nav() {
     <header className="sticky top-0 z-40 border-b border-line/50 bg-white/70 backdrop-blur-xl">
       <div className="flex w-full items-center justify-between px-4 py-3 lg:px-6">
         <div className="flex items-center gap-8">
-          <a href="#top" aria-label="Roomz home" className="flex items-center">
+          <a href="/" aria-label="Roomz home" className="flex items-center">
             <Wordmark height={24} />
           </a>
           <nav className="hidden items-center gap-7 md:flex" aria-label="Main">
