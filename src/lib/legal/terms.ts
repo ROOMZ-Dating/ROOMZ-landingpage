@@ -191,7 +191,7 @@ export const termsOfService: LegalDocument = {
       blocks: [
         {
           type: "p",
-          text: "When you join a room, the room's Event Organizer can see aggregate statistics about that room (total guests, total Hey!s sent, total matches) and, specifically, which named guests in that room have matched with each other. This is disclosed to you before you join a room, and you consent to it by joining. Organizers cannot see who sent or received an individual Hey!, and cannot read chat messages under any circumstances. Full detail on what organizers can and cannot see is set out in our Privacy Policy, Section 5.2.",
+          text: "When you join a room, the room's Event Organizer can see aggregate statistics about that room (such as total guests, total Hey!s sent, total matches) and, specifically, which named guests in that room have matched with each other. This is disclosed to you before you join a room, and you consent to it by joining. Organizers cannot see who sent or received an individual Hey!, and cannot read chat messages under any circumstances. Full detail on what organizers can and cannot see is set out in our Privacy Policy, Section 5.2.",
         },
       ],
     },

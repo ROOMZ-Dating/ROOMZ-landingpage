@@ -14,7 +14,7 @@ export const nav = {
     { label: "Trust", href: "/#trust" },
     { label: "FAQ", href: "/#faq" },
   ],
-  secondary: { label: "Sign in", href: "#" },
+  secondary: { label: "Organizer Login", href: "/login" },
 };
 
 export const hero = {

@@ -101,7 +101,7 @@ export const privacyPolicy: LegalDocument = {
           rows: [
             [
               "Name & Age",
-              "Display on profile to other room guests",
+              "Display on profile to other room guests. Age (not name) is also shown to organizers as an anonymized aggregate breakdown by range — see Section 5.2.",
               "Until account deletion",
             ],
             [
@@ -116,7 +116,7 @@ export const privacyPolicy: LegalDocument = {
             ],
             [
               "Gender",
-              "Powers the gender filter in room grids; not displayed as a profile field",
+              "Powers the gender filter in room grids; not displayed as a profile field; shown to organizers only as an anonymized aggregate breakdown (Section 5.2)",
               "Until account deletion",
             ],
             [
@@ -210,7 +210,7 @@ export const privacyPolicy: LegalDocument = {
       blocks: [
         {
           type: "p",
-          text: "Your profile (name, age, photos, job, height, about me) is visible to other guests in rooms you have joined. Your gender is used only to power the gender filter and is not itself displayed as a field on your profile card. Your profile is not visible to users outside your rooms. Chat messages are visible only to the matched user you are chatting with.",
+          text: "Your profile (name, age, photos, job, height, about me) is visible to other guests in rooms you have joined. Your gender is used to power the gender filter and is not itself displayed as a field on your profile card visible to other guests. In anonymized, aggregate form, gender data may also be shown to the organizer of a room you've joined — see Section 5.2. Your profile is not visible to users outside your rooms. Chat messages are visible only to the matched user you are chatting with.",
         },
       ],
     },
@@ -227,13 +227,13 @@ export const privacyPolicy: LegalDocument = {
         {
           type: "list",
           items: [
-            "Aggregate, anonymized statistics about the room as a whole — total guests joined, total Hey! messages sent, total matches made, and overall match rate.",
+            "Aggregate, anonymized statistics about the room as a whole — total guests invited (link or code opens), total guests joined, total Hey! messages sent, total matches made, overall match rate, and how many matches went on to exchange at least one chat message. This also includes an anonymized breakdown of the room's guests by gender and by age range, how guests joined (QR code, link, or entered code), and the times of day guests were most active. Any breakdown category with fewer than 3 guests is withheld to prevent identifying an individual from a small group. This information is available to organizers in the Roomz app and on our web dashboard for organizers; organizers on the Unlimited Plan can also generate downloadable reports containing these same aggregate figures.",
             "Which named guests in their room matched with each other ('match pairs') — that is, the first names of both users in a match and the time the match occurred. This information is identifiable, not anonymized.",
           ],
         },
         {
           type: "p",
-          text: "Organizers cannot read your chat messages under any circumstances, and cannot see who sent or received an individual Hey! — only the fact that a match occurred between two named guests. Before you join any room, the app displays a notice that your profile — and, if you match with someone, the fact of that match — will be visible to the organizer of that room. By joining a room, you consent to this disclosure for that room.",
+          text: "Organizers cannot read your chat messages under any circumstances, cannot see who sent or received an individual Hey!, and cannot see which specific guests exchanged messages — only the fact that a match occurred between two named guests, and, in aggregate, how many of their room's matches went on to chat. Before you join any room, the app displays a notice that your profile — and, if you match with someone, the fact of that match — will be visible to the organizer of that room. By joining a room, you consent to this disclosure for that room.",
         },
         {
           type: "p",
