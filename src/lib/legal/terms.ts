@@ -110,6 +110,7 @@ export const termsOfService: LegalDocument = {
             "Scrape, crawl, or extract data from the App",
             "Use the App for any illegal purpose",
             "Share another user's private information without their consent",
+            "Use contact information obtained through the App in violation of applicable law or these Terms, including sending marketing communications to guests who have not opted in",
             "Create multiple accounts",
           ],
         },
@@ -191,6 +192,45 @@ export const termsOfService: LegalDocument = {
         {
           type: "p",
           text: "When you join a room, the room's Event Organizer can see aggregate statistics about that room (total guests, total Hey!s sent, total matches) and, specifically, which named guests in that room have matched with each other. This is disclosed to you before you join a room, and you consent to it by joining. Organizers cannot see who sent or received an individual Hey!, and cannot read chat messages under any circumstances. Full detail on what organizers can and cannot see is set out in our Privacy Policy, Section 5.2.",
+        },
+      ],
+    },
+    {
+      id: "guest-marketing-opt-in",
+      number: "5.7",
+      level: 2,
+      title: "Guest Marketing Opt-In",
+      blocks: [
+        {
+          type: "p",
+          text: "When joining a room, guests may be offered the option to receive marketing communications from that room's Event Organizer. This option is off by default and is never required to join or use a room. If a guest explicitly opts in, the guest's phone number (without their name or profile details) is made available to that room's organizer for marketing purposes, as described in our Privacy Policy. Guests may withdraw this consent at any time from the room's settings in the App.",
+        },
+      ],
+    },
+    {
+      id: "organizer-use-of-guest-contact-data",
+      number: "5.8",
+      level: 2,
+      title: "Organizer Use of Guest Contact Data",
+      blocks: [
+        {
+          type: "p",
+          text: "Event Organizers who receive guest phone numbers through the marketing opt-in feature agree to the following conditions:",
+        },
+        {
+          type: "list",
+          items: [
+            "Use the numbers solely for their own marketing communications related to their events, venue, or services",
+            "Comply with all applicable laws governing marketing communications and data protection, including anti-spam laws requiring consent and opt-out mechanisms (such as Israel's Communications Law Amendment 40, the GDPR, and the TCPA, as applicable)",
+            "Honor any opt-out or unsubscribe request from a guest promptly",
+            "Not sell, rent, share, or transfer guest phone numbers to any third party",
+            "Delete a guest's phone number promptly upon the guest's withdrawal of consent or upon notice from Roomz",
+            "Implement reasonable security measures to protect the numbers in their possession",
+          ],
+        },
+        {
+          type: "p",
+          text: "Violation of these conditions constitutes a material breach of these Terms. Roomz may revoke an organizer's access to the marketing opt-in feature, suspend or terminate the organizer's account, and notify affected guests. The Event Organizer is solely responsible and liable for their use of guest contact data and agrees to indemnify Roomz for any claims arising from such use, in accordance with Section 13.",
         },
       ],
     },
